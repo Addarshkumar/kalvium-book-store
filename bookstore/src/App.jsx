@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Homepage from './components/Homepage'
+import Signuppage from './components/Signuppage'
+import { Routes,Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
+    // navigate between different pages
     <>
-  <Homepage />
+  <Routes>
+    <Route path='/' element={<Homepage />}></Route>
+    <Route path='/Signuppage' element={<Signuppage />}></Route>
+  </Routes>
+  
     </>
   )
 }
